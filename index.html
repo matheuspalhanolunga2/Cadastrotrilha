@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-8">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title text-center">Inscreva-se no nosso programa</h2>
+            <form id="cadastroForm" action="/cadastro" method="post">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nome completo" name="usuario_nome" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="E-mail" name="usuario_email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="CPF" name="usuario_cpf" required>
+              </div>
+              <div class="form-group">
+                <select class="form-control" name="usuario_nivel_escolaridade" required>
+                  <option value="">Nível de escolaridade</option>
+                  <option value="ensino-medio">Ensino Médio</option>
+                  <option value="superior">Superior</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Estado" name="usuario_estado" required>
+              </div>
+              <div class="form-group">
+                <select class="form-control" name="usuario_situacao" required>
+                  <option value="">Situação</option>
+                  <option value="cursando">Cursando</option>
+                  <option value="concluido">Concluído</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Instituição" name="usuario_instituicao" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Cidade" name="usuario_cidade" required>
+              </div>
+              <div class="form-group">
+                <input type="file" class="form-control-file" name="anexo_documento" accept=".pdf,.doc,.docx">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+            </form>
+            <p id="mensagemCadastro" class="mensagem"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
